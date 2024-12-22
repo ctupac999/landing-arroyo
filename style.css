@@ -1,144 +1,294 @@
-/* Estilos para el scroll visible solo cuando se usa */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Evita el desplazamiento innecesario de la barra de scroll */
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    overflow-y: auto; /* Scroll vertical solo si es necesario */
-    overflow-x: hidden; /* Oculta el scroll horizontal */
-    scrollbar-gutter: stable; /* Mantiene el espacio para el scrollbar estable */
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Estilos opcionales para navegadores modernos (opcional) */
+/* Ocultar scrollbar */
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+}
+
 body::-webkit-scrollbar {
-    width: 2px; /* Ancho de la barra */
+    width: 6px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #aaa; /* Color de la barra */
-    border-radius: 4px; /* Redondeo de la barra */
+    background-color: rgba(170, 170, 170, 0.8);
+    border-radius: 4px;
 }
 
 body::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
-
-/* Hero ocupa el 90% de la pantalla */
+/* Hero Section */
 .hero {
-    background: url('./images/hero.jpg') no-repeat center center/cover; 
-    height: 90vh; /* 90% de la altura */
+    background: url('./images/hero.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.hero-content {
-    text-align: center;
     color: #fff;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    margin: 10vh;
+    line-height: 1px;
 }
 
-.hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+#brand {
+    width: 445px;
+    height: 81px;
+    background: url('./images/brand.svg') no-repeat center center/cover;
+}
+
+#landCO{
+    width: 725px;
+    height: 134px;
+    margin-top: 10vh;
+    background: url('./images/landCo.svg') no-repeat center center/cover;
+}
+
+.hero-content p {
+    font-size: 26px;
+    font-weight: 700;
+
 }
 
 .financing {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #d4af37;
+    margin-top: 5vh;
+    font-size: 24px;
+    font-weight: 500;
+    }
+
+#santander {
+    width: 139px;
+    height: 64px;
+    background: url('./images/Santander.svg') no-repeat center center/cover;
 }
 
-/* Características ocupa el 10% restante */
+/* Features Section */
 .features {
-    height: 10vh; /* 10% de la altura */
+    height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 0 1rem;
+    background-color: #505050;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
 }
 
 .feature-item span {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #555;
+    font-size: 18px;
+    font-weight: 700;
+    color: #cfcfcf;
 }
 
-/* Sección de descripción */
-.description {
+#feature1{
+    width: 49px;
+    height: 34px;
+    background: url('./images/feature1.svg') no-repeat center center/cover;
+}
+
+#feature2{
+    width: 63px;
+    height: 42px;
+    background: url('./images/feature2.svg') no-repeat center center/cover;
+}
+
+#feature3{
+    width: 57px;
+    height: 41px;
+    background: url('./images/feature3.svg') no-repeat center center/cover;
+}
+
+#feature4{
+    width: 34px;
+    height: 34px;
+    background: url('./images/feature4.svg') no-repeat center center/cover;
+}
+
+#feature5{
+    width: 36px;
+    height: 36px;
+    background: url('./images/feature5.svg') no-repeat center center/cover;
+}
+
+.marcaDeAgua{
+    width: 235px;
+    height: 235px;
+    background: url('./images/marcaDeAgua.svg') no-repeat center center/cover;
+}
+
+.description{
+    height: 75vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 4rem 2rem;
-    background-color: #fff;
+    justify-content: center;
 }
 
-.description-text {
-    width: 45%;
+.container {
+    width: 35vw;
+    height: 420px;
+    display: flex;
+    justify-content: space-between
 }
 
-.description-text h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+#sientete{
+    width: 444px;
+    height: 230px;
+    background: url('./images/Sientete.svg') no-repeat center center/cover;
+    z-index: 10;
 }
 
-.description-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 5px;
+#piscina{
+    width: 444px;
+    height: 177px;
+    background: url('./images/piscina.jpg') no-repeat center center/cover;
 }
 
-/* Urbanización */
-.urbanization {
-    background-color: #f8f8f8;
-    padding: 3rem 2rem;
-    text-align: center;
+.description-text{
+    width: 680px;
+    height: 420px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.urbanization h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.description-text p{
+    font-weight: 400;
+    font-size: 19px;
 }
 
-/* Formulario en el footer */
-.contact-form {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
+/* 3er*/
+.section-gray {
+    height: 35vh;
+    background-color: #CFCFCF;
+    display: flex;
+    padding: 8rem 8rem;
+    gap: 2rem; 
 }
 
-.contact-form form {
+.text-left {
+    width: 667px;
+    height: 222px;
+    font-size: 19px;
+    line-height: 28px;  
+}
+
+#enUnaUniversidad{
+    width: 667px;
+    height: 330px;
+    background: url('./images/enUnaUniversidad.svg') no-repeat center center/cover;
+}
+
+#arroyo{
+    height: 100vh;
+    background: url('./images/arroyo.png') no-repeat center center/cover;
+}
+
+#enElDistrito{
+    width: 474px;
+    height: 231px;
+    background: url('./images/enElDistrito.svg') no-repeat center center/cover;
+}
+#container2{
+    height: 25vh;
+    background-color: #cfcfcf;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact-form input {
-    padding: 0.5rem;
-    font-size: 1rem;
+#ubicacion{
+    height: 65px;
+    width: 444px;
+    background: url('./images/ubicacion.svg') no-repeat center center/cover;
+}
+
+.container2 p{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#maps{
+    height: 90vh;
+    background: url('./images/maps.png') no-repeat center center/cover;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+footer input, footer button {
+    padding: 0.75rem;
     border: none;
     border-radius: 5px;
 }
 
-.contact-form button {
+footer button {
     background-color: #d4af37;
     color: #fff;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.contact-form button:hover {
-    background-color: #b6902c;
+footer button:hover {
+    background-color: #b88e2f;
+}
+
+/* Adaptación Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .feature-item span {
+        font-size: 0.9rem;
+    }
+
+    .section-gray {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .text-right {
+        font-size: 2rem;
+    }
 }
